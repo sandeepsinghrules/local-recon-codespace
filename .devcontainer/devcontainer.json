@@ -1,0 +1,25 @@
+{
+  "name": "Vue.js Dev Container",
+  "build": {
+    "dockerfile": "./Dockerfile"  
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "postCreateCommand": [
+    "npm install --legacy-peer-deps",
+    "npm config set python /usr/bin/python3"  
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "octref.vetur"
+      ]
+    }
+  },
+  "forwardPorts": [8086]
+}

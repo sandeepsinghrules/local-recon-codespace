@@ -1,20 +1,11 @@
 {
   "name": "Vue.js Dev Container",
-  "build": {
-    "args": {
-      "VARIANT": "18"
-    }
-  },
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
-    },
-    "ghcr.io/devcontainers/features/python:1": {} 
+    "ghcr.io/devcontainers/features/node:latest": {},
+    "ghcr.io/devcontainers/features/python:latest": {} 
   },
-  "postCreateCommand": [
-    "npm install --legacy-peer-deps",  
-    "npm config set python /usr/bin/python3" 
-  ],
+  "postCreateCommand": "npm install --legacy-peer-deps ; npm config set python /usr/bin/python3",
   "customizations": {
     "vscode": {
       "extensions": [
